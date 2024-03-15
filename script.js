@@ -8,6 +8,9 @@ const patternEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 function successReg(input) {
     const formGroup = input.parentElement;
     formGroup.className = "form-group success";
+    const errorMessage = formGroup.querySelector('.error-message');
+    errorMessage.innerText = 'success';
+    errorMessage.style.visibility = 'hidden';
 }
 
 function errorReg(input, message) {
@@ -16,6 +19,7 @@ function errorReg(input, message) {
     const errorMessage = formGroup.querySelector('.error-message');
     errorMessage.innerText = message;
     errorMessage.style.visibility = 'visible';
+    
 }
 
 function checkFirstname(){
@@ -43,7 +47,6 @@ function checkEmail(errorText){
         errorReg(yourEmail, "Looks like this is not an email");
         errorText = "email@example/com";
         yourEmail.value=errorText;
-        errorText.style.color='red';
         return false;
     } else {
         successReg(yourEmail);
@@ -52,7 +55,7 @@ function checkEmail(errorText){
 }
 
 function checkPassword(){
-    if (!patternPassword.test(yourPass.value)) {
+    if (yourPass.value === "" || !patternPassword.test(yourPass.value))  {
         errorReg(yourPass, "password can not be empty");
         return false;
 
