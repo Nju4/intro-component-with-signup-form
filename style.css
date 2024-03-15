@@ -1,0 +1,167 @@
+.background {
+    background-image: url('images/bg-intro-desktop.png'), linear-gradient(hsl(0, 100%, 74%), hsl(0, 100%, 74%));
+    padding: 8%;
+    font-family: 'Poppins', sans-serif;
+    height: auto;
+    margin: auto;
+    font: 'poppins';
+    
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    flex-direction: center;
+    align-items: center;
+    margin: 0px;
+    padding: auto;
+
+}
+
+.title-head {
+    width: 50%;
+    color: white;
+    margin: auto;
+    align-items: center;
+}
+
+h1{
+    font-size: 40px;
+    width: 90%;
+}
+.header{
+    font-size: 15px;
+    width: 80%;
+    
+}
+
+.title-head2{
+    border-radius: 20px;
+    margin: 0px;
+
+   
+ }
+
+ .try-it{
+    background-color: hsl(248, 32%, 49%);
+    color: white;
+    border-radius:5px ;
+    padding: 20px;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+    border: none;
+ }
+
+ .form{
+    margin-top: 20px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    color: hsl(249, 10%, 26%);
+    
+    
+ }
+.form-group{
+   margin: 0px;
+   
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0px 10px 5px;
+    border-radius: 5px;
+    border: 1px solid
+
+ }
+
+ 
+.error-message{
+   font-style: italic;
+   font-size: 11px;
+   color: hsl(0, 100%, 74%);
+   font-weight: 600;
+   margin: auto;
+   position: relative;
+   left: 65%;
+   visibility: hidden;
+}
+
+.btn{
+   background-color: hsl(154, 59%, 51%);
+   color: white;
+   border-radius:5px ;
+   border: none;
+   padding: 20px;
+   margin: auto;
+   width: 100%;
+   cursor: pointer;
+   font-size: 14px;
+   font-weight: 600;
+}
+
+.btn:hover {
+    background-color: hsl(154, 56%, 60%);
+}
+
+.notes{
+    font-size: 14px;
+    color: hsl(246, 25%, 77%);
+}
+
+span {
+    color: hsl(0, 100%, 74%);
+    font-weight: 500;
+}
+
+.form-group.error input{
+    border: 2px solid hsl(0, 100%, 74%);
+    background-image: url('images/icon-error.svg');
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+}
+
+.form-group.success input{
+    border: 2px solid hsl(154, 59%, 51%);
+}
+
+.attribution {
+    color: white;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .background {
+        height: auto;
+    }
+    .card {
+        flex-direction: column;
+    }
+
+    .title-head {
+        width: auto;
+        color: white;
+        margin: auto;
+        text-align: center;
+        justify-content: center;
+    }
+
+    h1{
+        font-size: 36px;
+        width: auto;
+        text-align: center;
+    }
+    .header{
+        font-size: 16px;
+        width: auto;
+        margin-bottom: 50px;
+    }
+
+    .try-it{
+        font-size: 16px;
+     }
+
+    .error-message{
+        left: 65%;
+     }
+} 
